@@ -4,7 +4,7 @@
 def two_sum(nums, target)
     # O(n) time complexity
     # O(n) space complexity
-    
+
     complement = {}
     nums.each_with_index do |number, index|
         if complement.key?(number)
