@@ -15,3 +15,17 @@ def two_sum(nums, target)
         end
     end
 end
+
+# test cases
+test_cases = [
+    (nums = [2, 7, 11, 15], target = 9, expected = [0, 1]),
+    (nums = [3, 2, 4], target = 6, expected = [1, 2]),
+    (nums = [3, 3], target = 6, expected = [0, 1])
+]
+
+test_cases.each do |nums, target, expected|
+    result = two_sum(nums, target)
+    raise "Test failed: expected #{expected}, got #{result}" unless result == expected
+end
+
+puts "All tests passed!"
