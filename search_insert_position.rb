@@ -12,9 +12,7 @@ def search_insert(nums, target)
 
         if nums[mid] == target
             return mid
-        end
-
-        if nums[mid] < target
+        elsif nums[mid] < target
             left = mid + 1
         else
             right = mid - 1
