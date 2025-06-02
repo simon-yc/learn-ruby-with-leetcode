@@ -25,16 +25,16 @@ end
 
 # test cases
 test_cases = [
-    (s = "hello", t = "hey", expected = false),
-    (s = "anagram", t = "nagaram", expected = true),
-    (s = "listen", t = "silent", expected = true),
-    (s = "mixson", t = "simonx", expected = true),
-    (s = "rat", t = "car", expected = false),
+    { s: "hello", t: "hey", expected: false },
+    { s: "anagram", t: "nagaram", expected: true },
+    { s: "listen", t: "silent", expected: true },
+    { s: "mixson", t: "simonx", expected: true },
+    { s: "rat", t: "car", expected: false },
 ]
 
-test_cases.each do |s, t, expected|
-    result = is_anagram(s, t)
-    raise "Test failed: expected #{expected}, got #{result}" unless result == expected
+test_cases.each do |test_case|
+    result = is_anagram(test_case[:s], test_case[:t])
+    raise "Test failed: expected #{test_case[:expected]}, got #{result}" unless result == test_case[:expected]
 end
 
 puts "All tests passed!"
